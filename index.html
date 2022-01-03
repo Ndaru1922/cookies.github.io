@@ -93,6 +93,7 @@ https://www.tooplate.com/view/2097-pop
                                                     </div>                                                
                                                     <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-lg-0 mb-sm-4 mb-4">
                                                         <img src="img/chef.jpg" class="img-fluid">
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -154,7 +155,7 @@ https://www.tooplate.com/view/2097-pop
                                                 </div>
                                                 <div class="row mb-4">
                                                     <div class="col-12">
-                                                        <p>..............................</p>
+                                                        <p> Apabila terdapat hal yang akan dipertanyakan silakan mengisikan form berikut :</p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -172,6 +173,7 @@ https://www.tooplate.com/view/2097-pop
                                                               <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Message" required></textarea>
                                                             </div>
                                                             <button type="submit" class="btn btn-primary tm-btn-submit">Submit</button>
+                                                            
                                                         </form>
                                                     </div>
                                                 </div>
@@ -224,7 +226,27 @@ https://www.tooplate.com/view/2097-pop
             $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright           
         });
 
-    </script>             
+    </script>      
+    
+    <!-- kirim pesan whatsaap -->
+    <script>
+        function gotowhatsapp() {
+            
+            var name = document.getElementById("Name").value;
+            var email = document.getElementById("Email").value;
+            var service = document.getElementById("Message").value;
+        
+            var url = "https://wa.me/085274068216?text=" 
+            + "Name: " + name + "%0a"
+            + "Email: " + email  + "%0a"
+            + "Message: " + message; 
+        
+            window.open(url, '_blank').focus();
+        }
+        </script>
+
+
+
 
 </body>
 </html>
